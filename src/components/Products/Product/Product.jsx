@@ -6,19 +6,20 @@ import useStyles from './styles';
 
 const Product = ({ product }) => {
   const classes = useStyles();
+  console.log(product)
 
   //const handleAddToCart = () => onAddToCart(product.id, 1);
 
   return (
     <Card className={classes.root}>
-      <CardMedia className={classes.media} image={product.image} title={product.name} />
+      <CardMedia className={classes.media} image={product.image.url} title={product.name} />
       <CardContent>
         <div className={classes.cardContent}>
           <Typography gutterBottom variant="h5" component="h2">
             {product.name}
           </Typography>
           <Typography gutterBottom variant="h5" component="h2">
-            ${product.price.formatted}
+            {product.price.formatted_with_symbol}
           </Typography>
         </div>
         <Typography dangerouslySetInnerHTML={{ __html: product.description }} variant="body2" color="textSecondary" component="p" />
