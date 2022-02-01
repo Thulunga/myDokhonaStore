@@ -35,6 +35,21 @@ const Navbar = ({ totalItems }) => {
 
           <div className={classes.grow} />
 
+          <MenuItem variant='h6' className={classes.button} color='inherit'>
+            Category
+            <Menu>
+              Dokhona
+            </Menu>
+          </MenuItem>
+
+          <MenuItem component={Link} to="/login" variant='h6' className={classes.button} color='inherit'>
+            Login
+          </MenuItem>
+          <MenuItem component={Link} to="/logout" variant='h6' className={classes.button} color='inherit'>
+            Logout
+          </MenuItem>
+
+
           {location.pathname !== "/cart" && (
             <div className={classes.button}>
               <IconButton
